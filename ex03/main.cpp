@@ -1,6 +1,8 @@
 #include "AMateria.h"
 #include "Crue.h"
 #include "Ice.h"
+#include "Character.h"
+#include "MateriaSource.h"
 #include "ICharacter.h"
 #include "IMateriaSource.h"
 
@@ -8,7 +10,7 @@ int main()
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
+	src->learnMateria(new Crue());
 	ICharacter* me = new Character("me");
 	AMateria* tmp;
 	tmp = src->createMateria("ice");

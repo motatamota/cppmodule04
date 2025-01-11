@@ -13,17 +13,20 @@
 #ifndef AMATERIA_H
 # define AMATERIA_H
 # include <iostream>
+# include <string>
 # include "ICharacter.h"
+
+class	ICharacter;
 
 class	AMateria
 {
 protected:
-
+	std::string type;
 public:
 	AMateria();
-	AMateria(AMateria &dst);
+	AMateria(const AMateria &dst);
 	AMateria(std::string const & type);
-	AMateria &operator=(AMateria &dst);
+	AMateria &operator=(const AMateria &dst);
 	virtual ~AMateria();
 	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;

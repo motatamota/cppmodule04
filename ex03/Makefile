@@ -1,6 +1,6 @@
 NAME = ex03
 FLAG = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp
+SRC = AMateria.cpp Character.cpp Crue.cpp Ice.cpp main.cpp MateriaSource.cpp ICharacter.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 

@@ -12,7 +12,36 @@
 
 #include "AMateria.h"
 
-void	AMateria::use(ICharacter& target)
+AMateria::AMateria() : type("default")
 {
-	
+}
+
+AMateria::AMateria(const AMateria &dst) : type(dst.type)
+{
+}
+
+AMateria::AMateria(std::string const & type) : type(type)
+{
+}
+
+AMateria &AMateria::operator=(const AMateria &dst)
+{
+	if (this == &dst)
+		return (*this);
+	type = dst.type;
+	return (*this);
+}
+
+AMateria::~AMateria()
+{
+}
+
+std::string const & AMateria::getType() const
+{
+	return (type);
+}
+
+void AMateria::use(ICharacter& target)
+{
+	(void)target;
 }

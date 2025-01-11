@@ -6,13 +6,14 @@
 /*   By: tashiget <tashiget@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 23:41:55 by tashiget          #+#    #+#             */
-/*   Updated: 2025/01/11 16:21:32 by tashiget         ###   ########.fr       */
+/*   Updated: 2025/01/11 19:08:48 by tashiget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef Character_H
 # define Character_H
-# include "AMateria.h"
+# include <string>
+# include "ICharacter.h"
 
 class	Character : public ICharacter
 {
@@ -28,7 +29,10 @@ public:
 	~Character();
 	void equip(AMateria* m);
 	void unequip(int idx);
+	std::string const & getName() const;
 	void use(int idx, ICharacter& target);
 };
+
+std::ostream	&operator<<(std::ostream &stream, const Character &tmp);
 
 #endif

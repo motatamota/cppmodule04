@@ -20,8 +20,8 @@ public:
 	Crue();
 	Crue(const Crue& Crue);
 	Crue&	operator=(const Crue& other);
-	virtual	~Crue();
-	Crue &clone();
+	~Crue();
+	AMateria* clone() const;
 	void use(ICharacter& target);
 };
 

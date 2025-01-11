@@ -20,8 +20,8 @@ public:
 	Ice();
 	Ice(const Ice& Ice);
 	Ice&	operator=(const Ice& other);
-	virtual	~Ice();
-	Ice &clone();
+	~Ice();
+	AMateria* clone() const;
 	void use(ICharacter& target);
 };
 
