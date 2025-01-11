@@ -11,3 +11,8 @@
 /* ************************************************************************** */
 
 #include "AMateria.h"
+
+void	AMateria::use(ICharacter& target)
+{
+	
+}

@@ -11,3 +11,8 @@
 /* ************************************************************************** */
 
 #include "Crue.h"
+
+void Crue::use(ICharacter& target)
+{
+	std::cout << "* heals " << target << "'s wounds *" << std::endl;
+}

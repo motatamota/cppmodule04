@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.h                                   :+:      :+:    :+:   */
+/*   Character.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tashiget <tashiget@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 23:42:37 by tashiget          #+#    #+#             */
-/*   Updated: 2025/01/11 15:57:36 by tashiget         ###   ########.fr       */
+/*   Created: 2024/12/11 23:41:55 by tashiget          #+#    #+#             */
+/*   Updated: 2025/01/11 16:21:32 by tashiget         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IMATERIASOURCE_H
-# define IMATERIASOURCE_H
-# include <string>
+#ifndef Character_H
+# define Character_H
 # include "AMateria.h"
 
-class	IMateriaSource
+class	Character : public ICharacter
 {
+private:
+	std::string name;
+	AMateria *slot[4];
+
 public:
-	virtual ~IMateriaSource() {}
-	virtual std::string const & getName() const = 0;
-	virtual AMateria* createMateria(std::string const & type) = 0;
+	Character();
+	Character(std::string arg);
+	Character(const Character& Character);
+	Character&	operator=(const Character& other);
+	~Character();
+	void equip(AMateria* m);
+	void unequip(int idx);
+	void use(int idx, ICharacter& target);
 };
 
 #endif

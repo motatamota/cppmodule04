@@ -12,14 +12,17 @@
 
 #ifndef CRUE_H
 # define CRUE_H
+# include "AMateria.h"
 
-class	Crue
+class	Crue : public AMateria
 {
 public:
 	Crue();
 	Crue(const Crue& Crue);
 	Crue&	operator=(const Crue& other);
 	virtual	~Crue();
+	Crue &clone();
+	void use(ICharacter& target);
 };
 
 #endif

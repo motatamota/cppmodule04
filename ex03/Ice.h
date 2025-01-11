@@ -12,14 +12,17 @@
 
 #ifndef ICE_H
 # define ICE_H
+# include "AMateria.h"
 
-class	Ice
+class	Ice : public AMateria
 {
 public:
 	Ice();
 	Ice(const Ice& Ice);
 	Ice&	operator=(const Ice& other);
 	virtual	~Ice();
+	Ice &clone();
+	void use(ICharacter& target);
 };
 
 #endif

@@ -11,3 +11,8 @@
 /* ************************************************************************** */
 
 #include "Ice.h"
+
+void Ice::use(ICharacter& target)
+{
+	std::cout << "* shoots an ice bolt at " << target << " *" << std::endl;
+}
